@@ -1,3 +1,11 @@
+// import {
+//   getDataFromLocalStorage,
+//   addDataToLocalStorage,
+// } from './js/local-storage-api';
+
+//import refs from './js/refs';
+import { startPage } from './js/theme-switcher';
+startPage();
 /*
   Створи список справ.
   На сторінці є два інпути які має вводиться назва і текст задачі.
