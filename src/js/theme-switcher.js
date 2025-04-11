@@ -4,7 +4,9 @@ import {
   getDataFromLocalStorage,
 } from './local-storage-api';
 
-refs.button.addEventListener('click', () => {
+refs.btnToggle.addEventListener('click', onClick);
+
+export function onClick() {
   if (refs.body.classList.contains('theme-dark')) {
     refs.body.classList.replace('theme-dark', 'theme-light');
     addDataToLocalStorage('theme', 'theme-light');
@@ -12,7 +14,8 @@ refs.button.addEventListener('click', () => {
     refs.body.classList.replace('theme-light', 'theme-dark');
     addDataToLocalStorage('theme', 'theme-dark');
   }
-});
+}
+
 export function startPage() {
   const savedTheme = getDataFromLocalStorage('theme');
 
@@ -22,5 +25,3 @@ export function startPage() {
     refs.body.classList.replace('theme-dark', 'theme-light');
   }
 }
-
-//startPage();

@@ -3,9 +3,13 @@
 //   addDataToLocalStorage,
 // } from './js/local-storage-api';
 
-//import refs from './js/refs';
-import { startPage } from './js/theme-switcher';
-startPage();
+import refs from './js/refs';
+import { startPage, onClick } from './js/theme-switcher';
+import { onSubmit } from './js/tasks';
+
+document.addEventListener('DOMContentLoaded', startPage);
+// document.addEventListener('DOMContentLoaded', startTask);
+refs.btnToggle.addEventListener('click', onClick);
 /*
   Створи список справ.
   На сторінці є два інпути які має вводиться назва і текст задачі.
@@ -14,11 +18,5 @@ startPage();
   У кожної картки має бути кнопка "Delete", щоб можна було
   прибрати завдання зі списку.
   Список із завданнями має бути доступним після перезавантаження сторінки.
-
-  Розмітка картки задачі
-  <li class="task-list-item">
-      <button class="task-list-item-btn">Delete</button>
-      <h3>Заголовок</h3>
-      <p>Текст</p>
-  </li>
 */
+refs.form.addEventListener('submit', onSubmit);
