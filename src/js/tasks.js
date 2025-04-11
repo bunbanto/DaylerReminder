@@ -11,8 +11,6 @@ export function onSubmit(event) {
 
   const { taskName, taskDescription } = event.target.elements;
 
-  console.log(taskName);
-
   if (taskName.value.trim() && taskDescription.value.trim()) {
     const taskData = {
       title: taskName.value.trim(),
