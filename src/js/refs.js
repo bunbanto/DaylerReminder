@@ -1,7 +1,3 @@
-//import { list } from 'postcss';
-
-//import { list } from 'postcss';
-
 const refs = {
   body: document.querySelector('body'),
   btnToggle: document.querySelector('#themeToggle'),
